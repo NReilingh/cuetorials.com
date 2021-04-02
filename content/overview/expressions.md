@@ -60,13 +60,13 @@ Cue supports regular expression constraints with the `=~` and `!~` operators.
 >}}
 
 They are based on [Go's regular expressions](https://golang.org/pkg/regexp/).
-Cue also has some additional {{<cuedoc page="/pkg/regexp" >}}regexp helpers{{</cuedoc>}}.:w
+Cue also has some additional {{<cuedoc page="/pkg/regexp" >}}regexp helpers{{</cuedoc>}}.
 
 
 
 ### Interpolation
 
-Cue supports interpolation in strings and bytes with `\(<expr>)`
+Cue supports interpolation in strings and bytes with `\(<expr>)`.
 
 {{< chromaDouble
   lhsPath="code/overview/expressions/interpolate.html" lhsTitle="interpolate.cue"
@@ -75,7 +75,7 @@ Cue supports interpolation in strings and bytes with `\(<expr>)`
 
 For more complicated scenarios, you can use the {{< cuedoc page="/pkg/text/template" >}}text/template{{</cuedoc>}} package.
 
-You can also interpolate field names. (as we will see shortly)
+You can also interpolate field names (as we will see shortly).
 
 
 ### List Comprehensions
@@ -85,7 +85,7 @@ You can iterate over both lists and struct fields.
 
 The form is `[ for key, val in <iterable> [condition] { production } ]`
 
-\* key is the index for lists and the label for fields
+\* `key` is the index for lists and the label for fields
 
 {{< chromaDouble
   lhsPath="code/overview/expressions/list-comp.html" lhsTitle="list-comp.cue"
@@ -106,9 +106,9 @@ Cue also has the ability to comprehend fields.
 
 Conditional fields, or guarded fields (if technically means guard), are another form of field comprehension.
 
-Some important notes to make from the usual understanding of if's:
+Some important notes to make from the usual understanding of ifs:
 
-- there is not an else statement, you have to have two with opposite conditions
-- there is no shortcircuiting of booleans, all conditions will be evaluated
+- there is not an else statement; you have to have two ifs with opposite conditions
+- there is no short-circuiting of booleans; all conditions will be evaluated
 
 {{< chromaHTML file="code/overview/expressions/guards.html" title="guards.cue" >}}
